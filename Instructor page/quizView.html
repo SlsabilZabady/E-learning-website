@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Learning Website</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".hamburger1").click(function () {
+          $(".wrapper1").toggleClass("collap");
+        });
+      });
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        background: #92a6e2;
+      }
+      .wrapper1 .top_navbar {
+        width: calc(100% );
+        height: 60px;
+        display: flex;
+        position: fixed;
+        top: 0px;
+        z-index: 100;
+      }
+
+      .wrapper1 .top_navbar .hamburger1 {
+        width: 70px;
+        height: 100%;
+        background: #333;
+        padding: 15px 17px;
+        border-top-left-radius: 20px;
+        cursor: pointer;
+      }
+
+      .wrapper1 .top_navbar .hamburger1 div {
+        width: 35px;
+        height: 4px;
+        background: #92a6e2;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+
+      .wrapper1 .top_navbar .top_menu {
+        width: calc(100% - 70px);
+        height: 100%;
+        background: #333;
+        border-top-right-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+
+      .wrapper1 .top_navbar .top_menu .logo {
+        color: #92a6e2;
+        font-size: 28px;
+        letter-spacing: 3px;
+        font-family: 'Ultra', serif;
+      }
+
+      .wrapper1 .top_navbar .top_menu ul {
+        display: flex;
+      }
+
+      .wrapper1 .top_navbar .top_menu ul li .msg {
+        display: block;
+        margin: 0 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 50px;
+        text-align: center;
+        color: #92a6e2;
+      }
+
+      .wrapper1 .top_navbar .top_menu ul li .msg:hover i {
+        color: white;
+      }
+
+      .wrapper1 .sidebar {
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        background: #333;
+        width: 200px;
+        height: calc(100% - 60px);
+        border-bottom-left-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .wrapper1 .sidebar ul li a {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        position: relative;
+        margin-bottom: 1px;
+        color: #92a6e2;
+        white-space: nowrap;
+      }
+
+      .wrapper1 .sidebar ul li a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: #92a6e2;
+        display: none;
+      }
+
+      .wrapper1 .sidebar ul li a span.icon {
+        margin-right: 10px;
+        display: inline-block;
+      }
+
+      .wrapper1 .sidebar ul li a span.title {
+        display: inline-block;
+      }
+
+      .wrapper1 .sidebar ul li a:hover,
+      .wrapper1 .sidebar ul li a.active {
+        background: #4360b5;
+        color: #fff;
+      }
+
+      .wrapper1 .sidebar ul li a:hover:before,
+      .wrapper1 .sidebar ul li a.active:before {
+        display: block;
+      }
+
+      .wrapper1 .main_container {
+        width: (100% - 200px);
+        margin-left: 200px;
+        padding: 15px;
+        margin-top: 70px;
+        transition: all 0.3s ease;
+      }
+
+      .wrapper1 .main_container .item {
+        background: #fff;
+        margin: 20px;
+        padding: 20px;
+        font-size: 14px;
+        line-height: 50px;
+        border-radius: 15px;
+      }
+
+      .wrapper1.collap .sidebar {
+        width: 70px;
+      }
+
+      .wrapper1.collap .sidebar ul li a {
+        text-align: center;
+      }
+
+      .wrapper1.collap .sidebar ul li a span.icon {
+        margin: 0;
+      }
+
+      .wrapper1.collap .sidebar ul li a span.title ,  .wrapper1.collap .sidebar ul li a small
+       {
+        display: none;
+      }
+
+      .wrapper1.collap .main_container {
+        width: (100% - 70px);
+        margin-left: 70px;
+      }
+      .dropdown-menu {
+        background-color: #333;
+        width: 200px;
+        height: 150px;
+        z-index: 4;
+      }
+      .dropdown-item {
+        line-height: 30px;
+        color: #92a6e2;
+      }
+
+      .msg{
+          position: relative;
+        }
+        .badge{
+          position: absolute;
+          top: 5px;
+          right: 1px;
+          padding: 5px 8px;
+          border-radius: 50%;
+          background-color: red;
+          color: white;
+        }
+        .notify{
+        width: 400px;
+        height: 100px;
+      }
+      .message a{
+        margin-left: 20px;
+        text-decoration: none;
+        color: #92a6e2;
+      }
+      .message a:hover{
+        color: white;
+        text-decoration: none;
+      }
+      .message {
+        width: 400px;
+        height: 350px;
+        
+      }
+     
+      .custom-file-label::after {
+        content: "browse";
+      }
+      .custom-file {
+        width: 300px;
+      }
+      .modal-body,
+      .modal-content {
+        width: 1000px;
+        margin: auto;
+      }
+      .modal-body input,
+      .custom-select {
+        width: 400px;
+      }
+      .item .span1 {
+        font-size: 30px;
+      }
+     .item h4 {
+        border-bottom: 3px solid #333;
+        display: inline;
+      }
+     .item p{
+        display: inline;
+        margin: 30%;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="wrapper1">
+      <div class="top_navbar">
+        <div class="hamburger1">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+        <div class="top_menu">
+          <div class="logo">E-Learning</div>
+          <ul>
+            <li class="dropdown">
+              <a
+                class="msg"
+                id="navbarDropdownMenuLink-333"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <span class="badge">2</span>
+              <div
+                class="message dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333"
+              >
+              <div class="dropdown-item m-2" href="#"
+              ><h5 >
+                Slsabil Zabady
+              </h5>
+              <p >Project 1 Deadline</p>
+              <p class="text-muted">30/3/2020 5:30 PM</p></div
+            >
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item m-2" href="#"
+              ><h5 >
+                Slsabil Zabady
+              </h5>
+              <p >About Quiz 1</p>
+              <p class="text-muted">30/4/2020 11:30 PM</p></div>
+              <div class="dropdown-divider"></div>
+              <div>
+                <a href="messages.html"  > See All <i class="fas fa-arrow-right"></i></a>
+              
+              </div>
+            </li>
+            <li class="dropdown">
+              <a
+                class="msg"
+                id="navbarDropdownMenuLink-333"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+              </a>
+              <span class="badge">0</span>
+              <div
+                class="notify dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333"
+              >
+              <div class="dropdown-item" >
+                <p style=" font-size: 18px;">There is no notification!</p>
+              </div>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle msg"
+                id="navbarDropdownMenuLink-333"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333"
+              >
+                <a class="dropdown-item" href="instProfile.html"> Profile</a>
+                <a class="dropdown-item" href="#">Account Settings</a>
+                <a class="dropdown-item" href="../loginPage.html">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <ul>
+          <li >
+            <a href="instProfile.html" style="color: white;">
+              <span class="icon"><i class="fas fa-user"></i></span>
+              <span class="title">Instructor Name</span>
+              <br>
+              <small class="ml-5 text-muted" >Instructor</small>
+              </a
+            >
+          </li>
+          <div class="dropdown-divider"></div>
+          <li>
+            <a href="instructorPage.html" >
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="title">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="active">
+              <span class="icon"><i class="fas fa-book"></i></span>
+              <span class="title">Courses</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="instCalender.html">
+              <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+              <span class="title">Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="messagesInst.html"
+              ><span class="icon"><i class="fas fa-envelope"></i></span>
+              <span class="title">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="../loginPage.html">
+              <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main_container">
+        <div class="item">
+          <span class="span1"><i class="fas fa-book mr-2"></i></span><span class="span1">Software Project Management</span>
+          <a href="courseView.html" class="btn btn-light float-right"> <i class="fas fa-long-arrow-alt-left mr-2"></i>Back</a> 
+            <br>
+           
+            <h4>Quiz 1 </h4><p id="demo" class="text-center"></p> <span class="btn btn-dark float-right">20 point</span>
+            <br>
+            
+            <div class="card">
+              <h5 class="card-header">(1) What are the types of Agile Methodology? <span class="btn btn-dark float-right">5 point</span></h5>
+              <div class="card-body">
+                <textarea name="" id="" cols="60" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="card">
+              <h5 class="card-header">(2) Which of these considered as traditional model? <span class="btn btn-dark float-right">5 point</span></h5>
+              <div class="card-body">
+                <form action="/action_page.php">
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Agile</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">incremental</label><br>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Waterfull</label>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <h5 class="card-header">(3) Which of these are iteration model? <span class="btn btn-dark float-right">5 point</span></h5>
+              <div class="card-body">
+                <form action="/action_page.php">
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Waterfull</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Agile</label><br>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Code and fix</label>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <h5 class="card-header">(4) Which of these considered as non-functional requirements?<span class="btn btn-dark float-right">5 point</span></h5>
+              <div class="card-body">
+                <form action="/action_page.php">
+                  <input type="checkbox" id="male" name="gender" value="male">
+                  <label for="male">performance</label><br>
+                  <input type="checkbox" id="female" name="gender" value="female">
+                  <label for="female">security</label><br>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">Reporting Requirements</label>
+                </form>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <button class="btn btn-success mx-auto">Submit</button>
+              <button class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+      </div>
+      </div>
+      <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Apr 30, 2020 01:30:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = hours + "h : "
+          + minutes + "m : " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+  </body>
+</html>

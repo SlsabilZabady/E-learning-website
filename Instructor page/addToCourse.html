@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Learning Website</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".hamburger1").click(function () {
+          $(".wrapper1").toggleClass("collap");
+        });
+      });
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        background: #92a6e2;
+      }
+      .wrapper1 .top_navbar {
+        width: calc(100% );
+        height: 60px;
+        display: flex;
+        position: fixed;
+        top: 0px;
+        z-index: 100;
+      }
+
+      .wrapper1 .top_navbar .hamburger1 {
+        width: 70px;
+        height: 100%;
+        background: #333;
+        padding: 15px 17px;
+        border-top-left-radius: 20px;
+        cursor: pointer;
+      }
+
+      .wrapper1 .top_navbar .hamburger1 div {
+        width: 35px;
+        height: 4px;
+        background: #92a6e2;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+
+      .wrapper1 .top_navbar .top_menu {
+        width: calc(100% - 70px);
+        height: 100%;
+        background: #333;
+        border-top-right-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+
+      .wrapper1 .top_navbar .top_menu .logo {
+        color: #92a6e2;
+        font-size: 28px;
+        letter-spacing: 3px;
+        font-family: 'Ultra', serif;
+      }
+
+      .wrapper1 .top_navbar .top_menu ul {
+        display: flex;
+      }
+
+      .wrapper1 .top_navbar .top_menu ul li .msg {
+        display: block;
+        margin: 0 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 50px;
+        text-align: center;
+        color: #92a6e2;
+      }
+
+      .wrapper1 .top_navbar .top_menu ul li .msg:hover i {
+        color: white;
+      }
+
+      .wrapper1 .sidebar {
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        background: #333;
+        width: 200px;
+        height: calc(100% - 60px);
+        border-bottom-left-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .wrapper1 .sidebar ul li a {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        position: relative;
+        margin-bottom: 1px;
+        color: #92a6e2;
+        white-space: nowrap;
+      }
+
+      .wrapper1 .sidebar ul li a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: #92a6e2;
+        display: none;
+      }
+
+      .wrapper1 .sidebar ul li a span.icon {
+        margin-right: 10px;
+        display: inline-block;
+      }
+
+      .wrapper1 .sidebar ul li a span.title {
+        display: inline-block;
+      }
+
+      .wrapper1 .sidebar ul li a:hover,
+      .wrapper1 .sidebar ul li a.active {
+        background: #4360b5;
+        color: #fff;
+      }
+
+      .wrapper1 .sidebar ul li a:hover:before,
+      .wrapper1 .sidebar ul li a.active:before {
+        display: block;
+      }
+
+      .wrapper1 .main_container {
+        width: (100% - 200px);
+        margin-left: 200px;
+        padding: 15px;
+        margin-top: 70px;
+        transition: all 0.3s ease;
+      }
+
+      .wrapper1 .main_container .item {
+        background: #fff;
+        margin: 20px;
+        padding: 20px;
+        font-size: 14px;
+        line-height: 50px;
+        border-radius: 15px;
+      }
+
+      .wrapper1.collap .sidebar {
+        width: 70px;
+      }
+
+      .wrapper1.collap .sidebar ul li a {
+        text-align: center;
+      }
+
+      .wrapper1.collap .sidebar ul li a span.icon {
+        margin: 0;
+      }
+
+      .wrapper1.collap .sidebar ul li a span.title ,  .wrapper1.collap .sidebar ul li a small
+       {
+        display: none;
+      }
+
+      .wrapper1.collap .main_container {
+        width: (100% - 70px);
+        margin-left: 70px;
+      }
+      .dropdown-menu {
+        background-color: #333;
+        width: 200px;
+        height: 150px;
+        z-index: 4;
+      }
+      .dropdown-item {
+        line-height: 30px;
+        color: #92a6e2;
+      }
+
+      .msg{
+          position: relative;
+        }
+        .badge{
+          position: absolute;
+          top: 5px;
+          right: 1px;
+          padding: 5px 8px;
+          border-radius: 50%;
+          background-color: red;
+          color: white;
+        }
+        .notify{
+        width: 400px;
+        height: 100px;
+      }
+      .message a{
+        margin-left: 20px;
+        text-decoration: none;
+        color: #92a6e2;
+      }
+      .message a:hover{
+        color: white;
+        text-decoration: none;
+      }
+      .message {
+        width: 400px;
+        height: 350px;
+        
+      }
+     /* .item .span1 {
+        font-size: 30px;
+      }*/
+      .custom-file-label::after {
+        content: "browse";
+      }
+      .custom-file {
+        width: 300px;
+      }
+      .modal{
+        padding-top: 100px;
+      }
+      .modal-body,
+      .modal-content {
+        width: 1000px;
+        margin: auto;
+      }
+      .modal-body input,
+      .custom-select {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-light">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Question
+          </h5>
+          <button
+            type="button"
+            class="close text-light"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="form-group row">
+              <label for="qtitle" class="col-form-label form-label col-md-3"
+                > Question No:</label
+              >
+              <div class="col-md-6">
+                <input
+                  id="qtitle"
+                  type="number"
+                  class="form-control"
+                  value="1"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="qtitle" class="col-form-label form-label col-md-3"
+                >Title:</label
+              >
+              <div class="col-md-6">
+                <input
+                  id="qtitle"
+                  type="text"
+                  class="form-control"
+                  value="What are the types of Agile Methodology?"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="type" class="col-form-label form-label col-md-3"
+                >Type:</label
+              >
+              <div class="col-md-4">
+                <select
+                  id="type"
+                  class="custom-control custom-select form-control"
+                >
+                  <option value="1">Input</option>
+                  <option value="2" selected>Textarea</option>
+                  <option value="3">Checkbox</option>
+                  <option value="3">Radio</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label
+                for="touch-spin-2"
+                class="col-form-label form-label col-md-3"
+                >Question Score:</label
+              >
+              <div class="col-md-4">
+                <div class="input-group bootstrap-touchspin">
+                 <input
+                    id="touch-spin-2"
+                    data-toggle="touch-spin"
+                    data-min="0"
+                    data-max="100"
+                    data-step="5"
+                    type="text"
+                    value="5"
+                    name="demo2"
+                    class="form-control"
+                    style="display: block;"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mb-0">
+              <div class="col-md-8 offset-md-3">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    <div class="wrapper1">
+      <div class="top_navbar">
+        <div class="hamburger1">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+        <div class="top_menu">
+          <div class="logo">E-Learning</div>
+          <ul>
+            <li class="dropdown">
+              <a
+                class="msg"
+                id="navbarDropdownMenuLink-333"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <span class="badge">2</span>
+              <div
+                class="message dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333"
+              >
+              <div class="dropdown-item m-2" href="#"
+              ><h5 >
+                Slsabil Zabady
+              </h5>
+              <p >Project 1 Deadline</p>
+              <p class="text-muted">30/3/2020 5:30 PM</p></div
+            >
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item m-2" href="#"
+              ><h5 >
+                Slsabil Zabady
+              </h5>
+              <p >About Quiz 1</p>
+              <p class="text-muted">30/4/2020 11:30 PM</p></div>
+              <div class="dropdown-divider"></div>
+              <div>
+                <a href="messages.html"  > See All <i class="fas fa-arrow-right"></i></a>
+              
+              </div>
+            </li>
+            <li class="dropdown">
+              <a
+                class="msg"
+                id="navbarDropdownMenuLink-333"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+              </a>
+              <span class="badge">0</span>
+              <div
+                class="notify dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333"
+              >
+              <div class="dropdown-item" >
+                <p style=" font-size: 18px;">There is no notification!</p>
+              </div>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle msg"
+                id="navbarDropdownMenuLink-333"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333"
+              >
+                <a class="dropdown-item" href="instProfile.html"> Profile</a>
+                <a class="dropdown-item" href="#">Account Settings</a>
+                <a class="dropdown-item" href="../loginPage.html">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <ul>
+          <li >
+            <a href="instProfile.html" style="color: white;">
+              <span class="icon"><i class="fas fa-user"></i></span>
+              <span class="title">Instructor Name</span>
+              <br>
+              <small class="ml-5 text-muted" >Instructor</small>
+              </a
+            >
+          </li>
+          <div class="dropdown-divider"></div>
+          <li>
+            <a href="instructorPage.html" >
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="title">Home</span></a
+            >
+          </li>
+          <li >
+            <a
+            href="courseList.html" class="active"
+            >
+              <span class="icon"><i class="fas fa-book"></i></span>
+              <span class="title">Courses</span>
+            </a>
+              
+          <li>
+            <a
+            href="instCalender.html"
+            >
+              <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+              <span class="title">Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="messagesInst.html"
+              ><span class="icon"><i class="fas fa-envelope"></i></span>
+              <span class="title">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="../loginPage.html">
+              <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main_container">
+        <div class="item">
+          <div class="login">
+            <div class="modal-content">
+              <div class="modal-body">
+                <ul
+                  class="nav nav-fill nav-pills mb-3"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link bg-warning text-light active"
+                      id="pills-home-tab"
+                      data-toggle="pill"
+                      href="#pills-login"
+                      role="tab"
+                      aria-controls="pills-login"
+                      aria-selected="true"
+                      >Add Document</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link bg-info text-light"
+                      id="pills-announce-tab"
+                      data-toggle="pill"
+                      href="#pills-announce"
+                      role="tab"
+                      aria-controls="pills-announce"
+                      aria-selected="false"
+                      >Add Announcement</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link bg-secondary text-light"
+                      id="pills-assign-tab"
+                      data-toggle="pill"
+                      href="#pills-assign"
+                      role="tab"
+                      aria-controls="pills-assign"
+                      aria-selected="false"
+                      >Add Assignment</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link bg-success text-light"
+                      id="pills-quiz-tab"
+                      data-toggle="pill"
+                      href="#pills-quiz"
+                      role="tab"
+                      aria-controls="pills-quiz"
+                      aria-selected="false"
+                      >Quiz</a
+                    >
+                  </li>
+                </ul>
+
+                <div class="tab-content p-4" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-login"
+                    role="tabpanel"
+                    aria-labelledby="pills-login-tab"
+                  >
+                    <div class="form-group row">
+                      <label for="exampleInputEmail1" class="col-3"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Description:</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Course:</label
+                      >
+                      <br />
+                      <select
+                        id="course_title"
+                        class="custom-select form-control col-6"
+                      >
+                        <option value="#" selected=""
+                          >Software Enginnering Management</option
+                        >
+                        <option value="#">Object Oriented Programming</option>
+                        <option value="#">Mobile Programming</option>
+                      </select>
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Document:</label
+                      >
+                      <br />
+                      <div class="custom-file col-6">
+                        <input
+                          type="file"
+                          id="quiz_image"
+                          class="custom-file-input"
+                        />
+                        <label for="quiz_image" class="custom-file-label"
+                          >Choose file</label
+                        >
+                      </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                      <button class="btn btn-success">Add</button>
+                      <button class="btn btn-danger">Cancel</button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-announce"
+                    role="tabpanel"
+                    aria-labelledby="pills-announce-tab"
+                  >
+                    <div class="form-group row">
+                      <label for="exampleInputEmail1" class="col-3"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Description:</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Course:</label
+                      >
+                      <br />
+                      <select
+                        id="course_title"
+                        class="custom-select form-control col-6"
+                      >
+                        <option value="#" selected=""
+                          >Software Enginnering Management</option
+                        >
+                        <option value="#">Object Oriented Programming</option>
+                        <option value="#">Mobile Programming</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-success">Add</button>
+                      <button class="btn btn-danger">Cancel</button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-assign"
+                    role="tabpanel"
+                    aria-labelledby="pills-assign-tab"
+                  >
+                    <div class="form-group row">
+                      <label for="exampleInputEmail1" class="col-3"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Description:</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Course:</label
+                      >
+                      <br />
+                      <select
+                        id="course_title"
+                        class="custom-select form-control col-6"
+                      >
+                        <option value="#" selected=""
+                          >Software Enginnering Management</option
+                        >
+                        <option value="#">Object Oriented Programming</option>
+                        <option value="#">Mobile Programming</option>
+                      </select>
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Document:</label
+                      >
+                      <br />
+                      <div class="custom-file col-6">
+                        <input
+                          type="file"
+                          id="quiz_image"
+                          class="custom-file-input"
+                        />
+                        <label for="quiz_image" class="custom-file-label"
+                          >Choose file</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-success">Add</button>
+                      <button class="btn btn-danger">Cancel</button>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-quiz"
+                    role="tabpanel"
+                    aria-labelledby="pills-quiz-tab"
+                  >
+                    <div class="form-group row">
+                      <label for="exampleInputEmail1" class="col-3"
+                        >Quiz title</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Description:</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control col-6"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputPassword1" class="col-3"
+                        >Course:</label
+                      >
+                      <br />
+                      <select
+                        id="course_title"
+                        class="custom-select form-control col-6"
+                      >
+                        <option value="#" selected=""
+                          >Software Enginnering Management</option
+                        >
+                        <option value="#">Object Oriented Programming</option>
+                        <option value="#">Mobile Programming</option>
+                      </select>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="cmn-toggle"
+                        class="col-sm-3 col-form-label form-label"
+                        >Timeframe</label
+                      >
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <div class="custom-control custom-checkbox-toggle">
+                            <input
+                              id="cmn-toggle"
+                              type="checkbox"
+                              aria-checked="false"
+                              class="custom-control-input"
+                              role="switch"
+                            />
+                            <label class="custom-control-label" for="cmn-toggle"
+                              ><span class="sr-only">Timeframe</span></label
+                            >
+                          </div>
+                        </div>
+                        <div class="form-inline">
+                          <div class="form-group mr-2">
+                            <input
+                              type="number"
+                              class="form-control text-center"
+                              value="4"
+                              style="width: 50px;"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <select class="custom-select">
+                              <option value="hour" selected="">Hours</option>
+                              <option value="minutes">Minutes</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
+                      Add Question
+                    </button></div>
+                    <div class="form-group">
+                    <ul class="list-group list-group-fit nestable-list-plain mb-0">
+                      
+                      <li class="list-group-item nestable-item" data-id="4">
+                          <div class="media align-items-center">
+                              <div class="media-left">
+                                  <span class="mr-3">1</span>
+                              </div>
+                              <div class="media-body">
+                                What are the types of Agile Methodology?
+                              </div>
+                              <div class="media-right text-right">
+                                  <div style="width:100px">
+                                      <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item nestable-item" data-id="5">
+                          <div class="media align-items-center">
+                            <div class="media-left">
+                              <span class="mr-3">2</span>
+                          </div>
+                              <div class="media-body">
+                                hich of these considered as traditional model? 
+                              </div>
+                              <div class="media-right text-right">
+                                <div style="width:100px">
+                                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item nestable-item" data-id="6">
+                          <div class="media align-items-center">
+                              <div class="media-left">
+                                <span class="mr-3">3</span>
+                              </div>
+                              <div class="media-body">
+                                Which of these are iteration model?
+                              </div>
+                              <div class="media-right text-right">
+                                  <div style="width:100px">
+                                      <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item nestable-item" data-id="6">
+                        <div class="media align-items-center">
+                            <div class="media-left">
+                              <span class="mr-3">4</span>
+                            </div>
+                            <div class="media-body">
+                              Which of these considered as non-functional requirements?
+                            </div>
+                            <div class="media-right text-right">
+                                <div style="width:100px">
+                                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                    <div class="form-group">
+                      <button class="btn btn-success">Add</button>
+                      <button class="btn btn-danger">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--<span class="span1"><i class="fas fa-book mr-2"></i></span><span class="span1">Software Project Management</span>
+            
+            <br>
+            <br>
+            <button>Add Document</button>
+            <button>Add Announcement</button>
+            <button>Add Assignment</button>
+            <div class="custom-file">
+              <input type="file" id="quiz_image" class="custom-file-input">
+              <label for="quiz_image" class="custom-file-label">Choose file</label>
+          </div>
+           <div class="row mt-5">
+              <div class="col-9 ">
+              <li>
+                <a
+                href="#stuSubmenu" data-toggle="collapse" 
+                aria-expanded="false" 
+                >
+                <div class="week ">
+                  <h5>Week 1</h5><i class="fas fa-chevron-down "></i>
+                </div>
+                </a>
+                <ul class="collapse list-unstyled submenu" id="stuSubmenu">
+                  <li>
+                    <div class="row mt-5">
+                    <div class="col-3 ">
+                            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                              <div class="card-header bg-transparent border-dark"></div>
+                              <div class="card-body ">
+                                <h5 class="card-title"><a>Lecture 1 Note</a></h5>
+                                <br>
+                                <span class=" mr-4 " ><a>Lecture 1</a></span>
+                                <span class=" p-1 bg-warning "> <i class="far fa-file mr-2"></i>Document</span>
+                              </div>
+                              <div class="card-footer bg-transparent border-dark"><i class="far fa-star"> </i> <i class="far fa-star"></i>
+                                <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i></div>
+                            </div>
+                          </div>
+                          <div class="col-3 ">
+                            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                              <div class="card-header bg-transparent border-dark"><span class=" p-1 bg-success">Attended</span></div>
+                              <div class="card-body ">
+                                <h5 class="card-title"><a>Lecture 1 will start at 3:00  PM</a></h5>
+                                <span class=" mr-4 " ><a>Lecture 1</a></span>
+                                <span class=" p-1 bg-secondary text-light"> <i class="fas fa-video mr-2"></i>Virtual Class</span>
+                              </div>
+                              <div class="card-footer bg-transparent border-dark"><i class="far fa-star"> </i> <i class="far fa-star"></i>
+                                <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i></div>
+                            </div>
+                          </div>
+                          <div class="col-3 ">
+                            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                              <div class="card-header bg-transparent border-dark"><span class=" p-1 bg-success">Submited</span></div>
+                              <div class="card-body ">
+                                <h5 class="card-title"><a>Project 1: Ticket Resevation System</a></h5>
+                                <span class=" p-1 ">Deadline:30/3/2020</span>
+                              </div>
+                              <div class="card-footer bg-transparent border-dark"><i class="far fa-star"> </i> <i class="far fa-star"></i>
+                                <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                  </li>
+                 
+                </ul> 
+              </li>
+            </div>
+            </div>
+         <br> 
+         <br>
+            <div class="container-fluid page__container">
+            <h1 class="h2">Add Lesson</h1>
+            <div class="card">
+                <div class="card-body">
+                    <form action="#">
+                        <div class="form-group row">
+                            <label for="avatar" class="col-sm-3 col-form-label form-label">Preview</label>
+                            <div class="col-sm-9">
+                                <div class="media align-items-center">
+                                    <div class="media-left">
+                                        <img src="assets/images/vuejs.png" alt="" width="100" class="rounded">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="custom-file" style="width: auto;">
+                                            <input type="file" id="avatar" class="custom-file-input">
+                                            <label for="avatar" class="custom-file-label">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title" class="col-md-3 col-form-label form-label">Title</label>
+                            <div class="col-md-6">
+                                <input id="title" type="text" class="form-control" placeholder="Write an awesome title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="course" class="col-md-3 col-form-label form-label">Course</label>
+                            <div class="col-md-4">
+                                <select id="course" class="custom-control custom-select form-control">
+                                    <option value="#">HTML</option>
+                                    <option value="#">Angular JS</option>
+                                    <option value="#" selected="">Vue.js</option>
+                                    <option value="#">CSS / LESS</option>
+                                    <option value="#">Design / Concept</option>
+                                </select>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Files</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="my-awesome-dropzone" action="/target" class="dropzone dz-clickable"><div class="dz-default dz-message">
+                              <span>Drop files here to upload</span></div></form>
+                        </div>
+                        <div class="col-md-6">
+                            <div data-toggle="tree">
+                                <ul style="display: none;" class="ui-fancytree-source fancytree-helper-hidden">
+                                    <li class="folder expanded">
+                                        lesson files
+                                        <ul>
+                                            <li>lesson-1-install.zip</li>
+                                            <li>lesson-1-steps.zip</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            <ul class="ui-fancytree fancytree-container fancytree-plain fancytree-ext-glyph" tabindex="0" role="tree" aria-multiselectable="true"><li role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib"><span class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef"><span role="button" class="fancytree-expander  fa fa-caret-down fa-fw"></span><span role="presentation" class="fancytree-icon  fa fa-folder-open fa-fw"></span><span class="fancytree-title">lesson files</span></span><ul role="group"><li role="treeitem" aria-selected="false"><span class="fancytree-node fancytree-exp-n fancytree-ico-c"><span class="fancytree-expander  "></span><span role="presentation" class="fancytree-icon  fa fa-file-o fa-fw"></span><span class="fancytree-title">lesson-1-install.zip</span></span></li><li role="treeitem" aria-selected="false" class="fancytree-lastsib"><span class="fancytree-node fancytree-lastsib fancytree-exp-nl fancytree-ico-c"><span class="fancytree-expander  "></span><span role="presentation" class="fancytree-icon  fa fa-file-o fa-fw"></span><span class="fancytree-title">lesson-1-steps.zip</span></span></li></ul></li></ul></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+      </div>
+    </div>
+  </body>
+</html>
