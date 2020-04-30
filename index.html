@@ -14,16 +14,101 @@
     <title>E-Learning Website</title>
 </head>
 <body style="background-color: #92a6e2;">
+    <div class="login">
+        <!-- Modal -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+
+                        <ul class="nav nav-fill nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Admin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-inst-tab" data-toggle="pill" href="#pills-inst" role="tab" aria-controls="pills-register" aria-selected="false">Instructor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-stu-tab" data-toggle="pill" href="#pills-stu" role="tab" aria-controls="pills-register" aria-selected="false">Student</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                            
+                            <h5 class="text-center">Login Please</h5>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" @keyup.enter="login" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+
+                             <div class="form-group">
+                                <a href="Admin page/adminPage.html" class="btn btn-primary">Login</a>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade " id="pills-inst" role="tabpanel" aria-labelledby="pills-inst-tab">
+                            
+                            <h5 class="text-center">Login Please</h5>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" @keyup.enter="login" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+
+                             <div class="form-group">
+                                <a href="Instructor page/instructorPage.html" class="btn btn-primary" @click="login">Login</a>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade " id="pills-stu" role="tabpanel" aria-labelledby="pills-stu-tab">
+                            
+                            <h5 class="text-center">Login Please</h5>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" @keyup.enter="login" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+
+                             <div class="form-group">
+                                <a href="Student page/studentPage.html" class="btn btn-primary" @click="login">Login</a>
+                            </div>
+
+                        </div>
+                        </div>
+                    
+ 
+                </div>
+           
+            </div>
+        </div>
+        </div>
     
+  </div>
     <div class="container">
         <div class="wrapper">
             <div class="row">
                 <div class="col-md-6">
                     <div class="feature-box">
                         <h1>Welcom To E-Learning Website</h1>
-                        <a href="Admin page/adminPage.html" class="btn ">Admin</a>
-                        <a href="Instructor page/instructorPage.html" class="btn ">Instructor</a>
-                        <a href="Student page/studentPage.html" class="btn ">Student</a>
+                        <a href="#" class="btn " data-toggle="modal" data-target="#login">Admin</a>
+                        <a href="#" class="btn " data-toggle="modal" data-target="#login">Instructor</a>
+                        <a href="#" class="btn " data-toggle="modal" data-target="#login">Student</a>
                     </div>
                 </div>
                 <div class="col-md-6">
