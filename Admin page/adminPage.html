@@ -83,11 +83,10 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
       }
 
-      .wrapper1 .top_navbar .top_menu .logo {
-        color: #92a6e2;
-        font-size: 28px;
-        letter-spacing: 3px;
-        font-family: 'Ultra', serif;
+      .wrapper1 .top_navbar .top_menu .logo img{
+        width: 220px;
+        height:50px;
+        
       }
 
       .wrapper1 .top_navbar .top_menu ul {
@@ -255,7 +254,7 @@
           <div class="three"></div>
         </div>
         <div class="top_menu">
-          <div class="logo">E-Learning</div>
+          <div class="logo"><img src="../Untitled-1.png" alt="logo"></div>
           <ul>
             <li class="dropdown">
               <a
@@ -687,6 +686,7 @@
                   <thead class="thead-light">
                     <tr>
                       <th scope="col"></th>
+                      <th scope="col"></th>
                       <th scope="col">Student Id</th>
                       <th scope="col">Full Name</th>
                       <th scope="col">Email Address</th>
@@ -697,7 +697,38 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row"><i class="fas fa-edit"></i></th>
+                      <th scope="row"><a href="addStu.html"><i class="fas fa-edit"></i></a></th>
+                      <td> 
+                        <a
+                        href="#studSubmenu" data-toggle="collapse" 
+                        aria-expanded="false" class="dropdown-toggle"
+                        >
+                        </a>
+                        <table class="collapse list-unstyled submenutable" id="studSubmenu">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Course Code</th>
+                                <th scope="col">Course Name</th>
+                                <th scope="col">Instructor</th>
+                                <th scope="col">Class Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">COME308</i></th>
+                                <td>Mobile Programming</td>
+                                <td>Instructor1</td>
+                                <td>Open</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">SE302</i></th>
+                                <td>Software Project Management</td>
+                                <td>Instructor2</td>
+                                <td>Open</td>
+                              </tr>
+                            </tbody>
+                        </table> 
+                      </td>
                       <td>17022</td>
                       <td>Slsabil Zabady</td>
                       <td>slsabilzabady@st.companyname.edu.tr</td>
@@ -707,6 +738,37 @@
                     </tr>
                     <tr>
                       <th scope="row"><i class="fas fa-edit"></i></th>
+                      <td> 
+                        <a
+                        href="#stud1Submenu" data-toggle="collapse" 
+                        aria-expanded="false" class="dropdown-toggle"
+                        >
+                        </a>
+                        <table class="collapse list-unstyled submenutable" id="stud1Submenu">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Course Code</th>
+                                <th scope="col">Course Name</th>
+                                <th scope="col">Instructor</th>
+                                <th scope="col">Class Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">COME308</i></th>
+                                <td>Mobile Programming</td>
+                                <td>Instructor1</td>
+                                <td>Open</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">SE302</i></th>
+                                <td>Software Project Management</td>
+                                <td>Instructor2</td>
+                                <td>Open</td>
+                              </tr>
+                            </tbody>
+                        </table> 
+                      </td>
                       <td>17035</td>
                       <td>Mohammed Ali</td>
                       <td>Mohammedali@st.companyname.edu.tr</td>

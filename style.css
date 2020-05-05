@@ -22,18 +22,34 @@
     color: #6c63ff;
     text-align: center;
     font-size: 50px;
+    letter-spacing: 3px;
+    font-family: 'Ultra', serif;
 }
-
+.feature-box  span img{
+   /* margin-top: 10%;
+    color: #6c63ff;
+    text-align: center;
+    font-size: 40px;
+   
+   font-family: 'Ultra', serif;
+   margin-left: 30px;*/
+   width:500px ;
+   height: 140px;
+   margin-top:20px;
+}
+.feature-box .types{
+    margin-left: 50px;
+}
 .feature-box a{
     text-decoration: none;
     background: #6c63ff;
     border-radius: 20px;
     padding: 10px 20px;
     margin-right: 30px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 100px;
     border: 2px solid #333 !important;
-    color: #333;
+    color: white;
     text-align: center;
 }
 .feature-box .btn{

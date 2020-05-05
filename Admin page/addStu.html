@@ -84,11 +84,10 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
       }
 
-      .wrapper1 .top_navbar .top_menu .logo {
-        color: #92a6e2;
-        font-size: 28px;
-        letter-spacing: 3px;
-        font-family: 'Ultra', serif;
+      .wrapper1 .top_navbar .top_menu .logo img{
+        width: 220px;
+        height:50px;
+        
       }
 
       .wrapper1 .top_navbar .top_menu ul {
@@ -262,7 +261,7 @@
           <div class="three"></div>
         </div>
         <div class="top_menu">
-          <div class="logo">E-Learning</div>
+          <div class="logo"><img src="../Untitled-1.png" alt="logo"></div>
           <ul>
             <li class="dropdown">
               <a
@@ -437,11 +436,11 @@
             <div class="form-row mb-4">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Student Name</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Slsabil Zabady">
               </div>
               <div class="form-group col-md-3">
                 <label for="inputEmail4">Student Id</label>
-                <input type="email" class="form-control w-80" id="inputEmail4">
+                <input type="text" class="form-control w-80" id="inputEmail4" placeholder="17023">
               </div>
               <div class="form-group col-md-3">
                 <label for="inputEmail4">Level</label>
@@ -449,7 +448,7 @@
                   <option selected>Choose...</option>
                   <option>1</option>
                   <option>2</option>
-                  <option>3</option>
+                  <option selected>3</option>
                   <option>4</option>
                 </select>
               </div>
@@ -457,17 +456,17 @@
             <div class="form-row mb-4">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Student Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="SlsabilZabady@st.companyname.edu.tr">
               </div>
               <div class="form-group col-md-3">
                 <label for="inputEmail4">Country</label>
-                <input type="email" class="form-control w-80" id="inputEmail4">
+                <input type="email" class="form-control w-80" id="inputEmail4" placeholder="Egypt">
               </div>
               <div class="form-group col-md-3">
                 <label for="inputEmail4">Language</label>
                 <select id="inputState" class="form-control">
                   <option selected>Choose...</option>
-                  <option>EN</option>
+                  <option selected>EN</option>
                   <option>TR</option>
                 </select>
               </div>
@@ -477,7 +476,7 @@
                   <label for="inputEmail4">Faculty</label>
                   <select id="inputState" class="form-control">
                     <option selected>Choose...</option>
-                    <option>Enginnering and natural science</option>
+                    <option selected>Enginnering and natural science</option>
                     <option>Humanities and Social Sciences</option>
                     <option>Communication</option>
                     <option>Health Sciences</option>
@@ -485,29 +484,29 @@
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputEmail4">Department</label>
-                  <input type="email" class="form-control w-80" id="inputEmail4">
+                  <input type="email" class="form-control w-80" id="inputEmail4" placeholder="Software Engineering">
                 </div>
                 
               </div>
               <div class="form-row mb-4">
                 <div class="form-group col-md-6">
                   <label for="inputAddress2">Current Address</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Istanbul">
                 </div>
                 
                   <div class="form-group col-md-3">
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Istanbul">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="inputState">State</label>
                     <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>...</option>
+                      <option selected>Choose</option>
+                      <option selected>Fatih</option>
                     </select>
                   </div>
               </div>
-            <button type="submit" class="btn btn-success">Add</button>
+            <button type="submit" class="btn btn-success">Save</button>
             <button type="submit" class="btn btn-danger">Cancel</button>
           </form>
         </div>
