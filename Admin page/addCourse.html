@@ -6,6 +6,8 @@
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -482,11 +484,27 @@
                     </select>
                   </div>
               </div>
-            <button type="submit" class="btn btn-success">Add</button>
-            <button type="submit" class="btn btn-danger">Cancel</button>
-          </form>
+              <button type="button" class="btn btn-success" onclick="add()">Add</button>
+              <button type="button" class="btn btn-danger">Cancel</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+      <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+      <script>
+        
+        function add()
+        {
+         /* alert("You Add a new Student Successfuly");*/
+         Swal.fire(
+          'Good job!',
+          'You Add a new Class!',
+          'success'
+        );
+
+        }
+      </script>
   </body>
 </html>
